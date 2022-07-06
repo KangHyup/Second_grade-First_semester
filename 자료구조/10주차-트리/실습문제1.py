@@ -1,0 +1,21 @@
+from TreeClass import *
+
+a = TNode('A', None, None)
+b = TNode('B', None, None)
+div = TNode('/', a, b)
+c = TNode('C', None, None)
+mul2 = TNode('*', div, c)
+d = TNode('D', None, None)
+mul1 = TNode('*', mul2, d)
+e = TNode('E', None, None)
+root = TNode('+', mul1, e)
+
+print('\n In-Order: ', end="")
+inorder(root)
+print('\n Pre-Order: ', end="")
+preorder(root)
+print('\n Post-Order: ', end="")
+postorder(root)
+print('\n Level-Order: ', end="")
+levelorder(root)
+print()
